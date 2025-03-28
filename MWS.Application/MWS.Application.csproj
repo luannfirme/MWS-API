@@ -10,4 +10,22 @@
     <ProjectReference Include="..\MWS.Domain\MWS.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClienteCases\SearchCliente\" />
+    <Folder Include="ClienteCases\GetByIdCliente\" />
+    <Folder Include="ClienteCases\UpdateCliente\" />
+    <Folder Include="ClienteCases\GetAllCliente\" />
+    <Folder Include="ClienteCases\DeleteCliente\" />
+    <Folder Include="ClienteCases\CreateCliente\" />
+    <Folder Include="Services\" />
+    <Folder Include="Shared\Exceptions\" />
+    <Folder Include="Shared\Behavior\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+  </ItemGroup>
+
 </Project>
