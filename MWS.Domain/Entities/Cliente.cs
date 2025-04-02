@@ -8,7 +8,7 @@
         public required string Nome { get; set; }
         public string? RazaoSocial { get; set; }
         public string? Telefone { get; set; }
-        public Guid EnderecoId { get; set; }
+        public Guid? EnderecoId { get; set; }
         public Endereco? Endereco { get; set; }
         public List<Veiculo>? Veiculos { get; set; }
     }

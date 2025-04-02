@@ -9,7 +9,7 @@ namespace MWS.Persistence
 {
     public static class ServiceExtensions
     {
-        public static void ConfigurarPersistencias(this IServiceCollection services, IConfiguration configuration)
+        public static void ConfigurePersistenceApp(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("MySql");
             services.AddDbContext<AppDbContext>(opt => opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));

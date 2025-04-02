@@ -2,6 +2,6 @@
 {
     public sealed class FuncionarioCargo : BaseEntity
     {
-        public string Nome { get; set; }
+        public required string Nome { get; set; }
     }
 }

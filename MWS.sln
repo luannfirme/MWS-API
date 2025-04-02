@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{CEB714CC-1732-4F75-AC52-79B81977F646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWS.Application", "MWS.Application\MWS.Application.csproj", "{AF169E2B-6CD2-4A05-99DE-35458FE2AC69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MWS.Application", "MWS.Application\MWS.Application.csproj", "{AF169E2B-6CD2-4A05-99DE-35458FE2AC69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWS.Domain", "MWS.Domain\MWS.Domain.csproj", "{67DAA902-04DF-417B-866C-E9DAF57D10DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MWS.Domain", "MWS.Domain\MWS.Domain.csproj", "{67DAA902-04DF-417B-866C-E9DAF57D10DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWS.Persistence", "MWS.Persistence\MWS.Persistence.csproj", "{B04EEAE7-DF0A-4C02-AB94-362BFFDD5ABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MWS.Persistence", "MWS.Persistence\MWS.Persistence.csproj", "{B04EEAE7-DF0A-4C02-AB94-362BFFDD5ABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWS.WebAPI", "MWS.WebAPI\MWS.WebAPI.csproj", "{60EA2FED-11E4-4C76-A803-A917ACFA660F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MWS.WebAPI", "MWS.WebAPI\MWS.WebAPI.csproj", "{60EA2FED-11E4-4C76-A803-A917ACFA660F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
