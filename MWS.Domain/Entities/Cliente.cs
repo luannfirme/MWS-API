@@ -4,7 +4,7 @@
     {
         public string? Cpf { get; set; }
         public string? Rg { get; set; }
-        public DateOnly? DataNascimento { get; set; }
+        public DateTime? DataNascimento { get; set; }
         public required string Nome { get; set; }
         public string? RazaoSocial { get; set; }
         public string? Telefone { get; set; }

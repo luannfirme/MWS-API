@@ -34,7 +34,7 @@ namespace MWS.Persistence.Migrations
 
                     b.HasIndex("ServicosId");
 
-                    b.ToTable("FuncionarioOrdemServicoExecutado");
+                    b.ToTable("FuncionarioOrdemServicoExecutado", (string)null);
                 });
 
             modelBuilder.Entity("MWS.Domain.Entities.Cliente", b =>
@@ -328,7 +328,7 @@ namespace MWS.Persistence.Migrations
 
                     b.HasIndex("ServicoId");
 
-                    b.ToTable("OrdensServicosExecutados");
+                    b.ToTable("OrdensServicosExecutados", (string)null);
                 });
 
             modelBuilder.Entity("MWS.Domain.Entities.Produto", b =>
@@ -509,7 +509,7 @@ namespace MWS.Persistence.Migrations
 
                     b.HasIndex("ServicosId");
 
-                    b.ToTable("OrdemServicoProduto");
+                    b.ToTable("OrdemServicoProduto", (string)null);
                 });
 
             modelBuilder.Entity("FuncionarioOrdemServicoExecutado", b =>

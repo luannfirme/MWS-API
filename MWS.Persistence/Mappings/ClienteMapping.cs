@@ -16,6 +16,10 @@ namespace MWS.Persistence.Mappings
                 .IsRequired(false)
                 .HasMaxLength(14);
 
+            builder.Property(x => x.DataNascimento)
+                .IsRequired(false)
+                .HasColumnType("date"); 
+
             builder.Property(x => x.Nome)
                 .IsRequired()
                 .HasMaxLength(50);
