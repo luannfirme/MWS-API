@@ -11,12 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClienteCases\SearchCliente\" />
-    <Folder Include="ClienteCases\GetByIdCliente\" />
-    <Folder Include="ClienteCases\UpdateCliente\" />
-    <Folder Include="ClienteCases\GetAllCliente\" />
-    <Folder Include="ClienteCases\DeleteCliente\" />
-    <Folder Include="ClienteCases\CreateCliente\" />
     <Folder Include="Services\" />
     <Folder Include="Shared\Exceptions\" />
     <Folder Include="Shared\Behavior\" />
