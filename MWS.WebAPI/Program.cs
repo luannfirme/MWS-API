@@ -1,5 +1,6 @@
 using MWS.Persistence;
 using MWS.Application.Services;
+using MWS.WebAPI.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,10 +19,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.ConfigurePresentationApp();
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

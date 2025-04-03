@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using MediatR;
+using MWS.Application.Shared.Exceptions;
 
 namespace MWS.Application.Shared.Behavior
 {
@@ -28,7 +29,7 @@ namespace MWS.Application.Shared.Behavior
                 var failures = validationResults.SelectMany(r => r.Errors).Where(f => f != null).ToList();
 
                 if (failures.Count != 0)
-                    throw new ValidationException(failures);
+                    throw new ValidationExceptionCustom(failures);
             }
 
             return await next();

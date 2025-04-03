@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MWS.Domain\MWS.Domain.csproj" />
+    <Compile Remove="Shared\Exceptions\ExceptionMiddleware.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Shared\Exceptions\" />
+    <ProjectReference Include="..\MWS.Domain\MWS.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
