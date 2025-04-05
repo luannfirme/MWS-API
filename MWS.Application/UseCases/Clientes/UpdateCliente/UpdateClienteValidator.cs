@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace MWS.Application.UseCases.Clientes.CreateCliente
+namespace MWS.Application.UseCases.Clientes.UpdateCliente
 {
-    public sealed class CreateClienteValidator : AbstractValidator<CreateClienteRequest>
+    public sealed class UpdateClienteValidator : AbstractValidator<UpdateClienteRequest>
     {
-        public CreateClienteValidator()
+        public UpdateClienteValidator()
         {
             RuleFor(x => x.Nome).NotNull().NotEmpty().MaximumLength(50).WithMessage("Informe o nome do cliente corretamente");
             RuleFor(x => x.Cpf).MinimumLength(11).MaximumLength(14).When(x => !string.IsNullOrEmpty(x.Cpf)).WithMessage("Informe um CPF/CNPJ válido");

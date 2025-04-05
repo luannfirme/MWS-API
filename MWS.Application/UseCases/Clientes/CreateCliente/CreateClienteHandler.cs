@@ -11,14 +11,12 @@ namespace MWS.Application.UseCases.Clientes.CreateCliente
         private readonly IUnitOfWork _unitOfWork;
         private readonly IClienteRepository _clienteRepository;
         private readonly IMapper _mapper;
-        private readonly IValidator<CreateClienteRequest> _validator;
 
-        public CreateClienteHandler(IUnitOfWork unitOfWork, IClienteRepository clienteRepository, IMapper mapper, IValidator<CreateClienteRequest> validator)
+        public CreateClienteHandler(IUnitOfWork unitOfWork, IClienteRepository clienteRepository, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _clienteRepository = clienteRepository;
             _mapper = mapper;
-            _validator = validator;
         }
 
         public async Task<CreateClienteResponse> Handle(CreateClienteRequest request, CancellationToken cancellationToken)
