@@ -2,6 +2,8 @@
 using MWS.Application.UseCases.Clientes.CreateCliente;
 using MWS.Application.UseCases.Clientes.DeleteCliente;
 using MWS.Application.UseCases.Clientes.GetAllCliente;
+using MWS.Application.UseCases.Clientes.GetByCpfCliente;
+using MWS.Application.UseCases.Clientes.GetByIdCliente;
 using MWS.Application.UseCases.Clientes.UpdateCliente;
 using MWS.Domain.Entities;
 
@@ -16,6 +18,8 @@ namespace MWS.Application.Shared.Mappings
             CreateMap<Cliente, GetAllClienteResponse>();
             CreateMap<Cliente, UpdateClienteResponse>();
             CreateMap<Cliente, DeleteClienteResponse>();
+            CreateMap<Cliente, GetByIdClienteResponse>();
+            CreateMap<Cliente, GetByCpfClienteResponse>();
         }
     }
 }

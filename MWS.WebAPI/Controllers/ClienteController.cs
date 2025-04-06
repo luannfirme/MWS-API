@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using MWS.Application.UseCases.Clientes.CreateCliente;
 using MWS.Application.UseCases.Clientes.DeleteCliente;
 using MWS.Application.UseCases.Clientes.GetAllCliente;
+using MWS.Application.UseCases.Clientes.GetByCpfCliente;
+using MWS.Application.UseCases.Clientes.GetByIdCliente;
 using MWS.Application.UseCases.Clientes.UpdateCliente;
 
 namespace MWS.WebAPI.Controllers
@@ -32,6 +34,41 @@ namespace MWS.WebAPI.Controllers
             var response = await _mediator.Send(new GetAllClienteRequest(), cancellationToken);
             return Ok(response);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<GetByIdClienteResponse>> GetById(Guid? id, CancellationToken cancellationToken)
+        {
+            if (id is null)
+                return BadRequest();
+
+            var request = new GetByIdClienteRequest(id.Value);
+
+            var response = await _mediator.Send(request, cancellationToken);
+
+            return Ok(response);
+        }
+
+        [HttpGet("cpf/{cpf}")]
+        public async Task<ActionResult<GetByCpfClienteResponse>> GetByCpf(string? cpf, CancellationToken cancellationToken)
+        {
+            if (cpf is null)
+                return BadRequest();
+
+            var request = new GetByCpfClienteRequest(cpf);
+
+            var response = await _mediator.Send(request, cancellationToken);
+
+            return Ok(response);
+        }
+        //public async Task<ActionResult<GetByCpfClienteResponse>> GetByCpf(GetByCpfClienteRequest request, CancellationToken cancellationToken)
+        //{
+        //    if (string.IsNullOrEmpty(request.Cpf))
+        //        return BadRequest();
+
+        //    var response = await _mediator.Send(request, cancellationToken);
+
+        //    return Ok(response);
+        //}
 
         [HttpPut("{id}")]
         public async Task<ActionResult<UpdateClienteResponse>> Update(Guid id, UpdateClienteRequest request, CancellationToken cancellationToken)
